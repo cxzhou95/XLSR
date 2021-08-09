@@ -1,0 +1,19 @@
+!!python/object:argparse.Namespace
+save_dir: exp/OneCyclicLR
+SR_rate: 3
+pretrained_model: ''
+div_factor: 50.0
+final_div_factor: 0.5
+lr_max: 0.0025
+pct_epoch: 50
+epochs: 5000
+batch_size: 16
+crop_size:
+- 32
+- 32
+intensity_list:
+- 1.0
+- 0.7
+- 0.5
+workers: 8
+device: 1
