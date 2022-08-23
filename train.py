@@ -92,11 +92,9 @@ if __name__ == '__main__':
     
     
     os.environ['CUDA_VISIBLE_DEVICES'] = str(opt.device)  # set environment variable
-    if torch.cuda.is_available():
-        device = 'cuda'
-    else:
-        assert torch.cuda.is_available(), 'CUDA unavailable, invalid device %s requested' % str(opt.device)  # check availablity
     device = 'cuda'
+    assert torch.cuda.is_available(), 'CUDA unavailable, invalid device %s requested' % str(opt.device)  # check availablity
+
     model = XLSR(opt.SR_rate)
     
     # load pretrained model
